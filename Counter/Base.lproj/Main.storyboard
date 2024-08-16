@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DKP-c7-ZQI">
+                                <rect key="frame" x="16" y="573" width="361" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DKP-c7-ZQI" secondAttribute="height" multiplier="361:61" id="3RH-kn-6k5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="25"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="НАЖМИ">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="НАЖМИ" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="0.0">
+                                        <color key="backgroundColor" red="0.0" green="0.4833333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3RH-kn-6k5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pressButt" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbF-0u-e2K"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" id="2Pw-bc-UKr">
+                                <rect key="frame" x="12" y="306" width="369" height="61"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Pw-bc-UKr" secondAttribute="height" multiplier="293:71" id="xoF-k8-52P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xoF-k8-52P"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DKP-c7-ZQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Wt-b6-w0R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Pw-bc-UKr" secondAttribute="trailing" constant="42" id="5kN-Uu-f6g"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6TY-F1-9k9"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="80b-nV-zCA"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="9pL-im-fyI"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Ejx-Hj-SuQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DKP-c7-ZQI" secondAttribute="trailing" constant="16" id="HGi-7d-QwZ"/>
+                            <constraint firstItem="DKP-c7-ZQI" firstAttribute="top" secondItem="2Pw-bc-UKr" secondAttribute="bottom" constant="230" id="HSo-xK-26P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Pw-bc-UKr" secondAttribute="trailing" constant="23" id="PB4-FC-K31"/>
+                            <constraint firstItem="DKP-c7-ZQI" firstAttribute="top" secondItem="2Pw-bc-UKr" secondAttribute="bottom" constant="250.66999999999999" id="SnY-Sp-3p0"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="UsU-aZ-56Q"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="cLJ-Db-nkO"/>
+                            <constraint firstItem="2Pw-bc-UKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ccz-KW-Qev"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DKP-c7-ZQI" secondAttribute="bottom" constant="161" id="csE-k6-xDP"/>
+                            <constraint firstItem="DKP-c7-ZQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fUU-Hf-bbe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Pw-bc-UKr" secondAttribute="trailing" constant="16" id="rJf-Ve-UUb"/>
+                            <constraint firstItem="DKP-c7-ZQI" firstAttribute="top" secondItem="2Pw-bc-UKr" secondAttribute="bottom" constant="250" id="veq-fy-UCJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Pw-bc-UKr" secondAttribute="trailing" constant="16" id="yPA-Et-X1x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DKP-c7-ZQI" secondAttribute="trailing" constant="16" id="zw7-Yh-5z2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5kN-Uu-f6g"/>
+                                <exclude reference="PB4-FC-K31"/>
+                                <exclude reference="rJf-Ve-UUb"/>
+                                <exclude reference="yPA-Et-X1x"/>
+                                <exclude reference="HGi-7d-QwZ"/>
+                                <exclude reference="zw7-Yh-5z2"/>
+                                <exclude reference="csE-k6-xDP"/>
+                                <exclude reference="6TY-F1-9k9"/>
+                                <exclude reference="80b-nV-zCA"/>
+                                <exclude reference="Ejx-Hj-SuQ"/>
+                                <exclude reference="cLJ-Db-nkO"/>
+                                <exclude reference="ccz-KW-Qev"/>
+                                <exclude reference="9pL-im-fyI"/>
+                                <exclude reference="UsU-aZ-56Q"/>
+                                <exclude reference="2Wt-b6-w0R"/>
+                                <exclude reference="fUU-Hf-bbe"/>
+                                <exclude reference="HSo-xK-26P"/>
+                                <exclude reference="SnY-Sp-3p0"/>
+                                <exclude reference="veq-fy-UCJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="DKP-c7-ZQI" id="F0l-PF-kXc"/>
+                        <outlet property="counter" destination="2Pw-bc-UKr" id="ADS-2Q-Ev8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
