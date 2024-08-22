@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DKP-c7-ZQI">
-                                <rect key="frame" x="16" y="573" width="361" height="45"/>
+                                <rect key="frame" x="12" y="393" width="369" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -34,12 +34,12 @@
                                 <state key="normal" title="НАЖМИ">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" title="НАЖМИ" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="medium" titleAlignment="center">
                                     <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="0.0">
-                                        <color key="backgroundColor" red="0.0" green="0.4833333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -47,11 +47,11 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="pressButt" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbF-0u-e2K"/>
+                                    <action selector="pressButtPlus" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRJ-mb-sv2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" id="2Pw-bc-UKr">
-                                <rect key="frame" x="12" y="306" width="369" height="61"/>
+                                <rect key="frame" x="12" y="136" width="369" height="61"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Pw-bc-UKr" secondAttribute="height" multiplier="293:71" id="xoF-k8-52P"/>
@@ -65,6 +65,79 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bouncesZoom="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMJ-zC-MM5">
+                                <rect key="frame" x="62" y="205" width="268" height="167"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="История">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" size="20" name="Futura-CondensedMedium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="20" name="Futura-CondensedMedium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="изменений">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" size="20" name="Futura-CondensedMedium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=":">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="20" name="Futura-CondensedMedium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HIm-Cd-sg6">
+                                <rect key="frame" x="12" y="453" width="369" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressButtMinus" destination="BYZ-38-t0r" eventType="touchUpInside" id="xOe-L7-6NS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-NP-YeQ">
+                                <rect key="frame" x="12" y="516" width="369" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Обнулиться" cornerStyle="medium" titleAlignment="center">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="makeNull" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAE-mO-agC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rUs-pE-qvi">
+                                <rect key="frame" x="184" y="466" width="24" height="16"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,10 +165,10 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5kN-Uu-f6g"/>
+                                <exclude reference="HGi-7d-QwZ"/>
                                 <exclude reference="PB4-FC-K31"/>
                                 <exclude reference="rJf-Ve-UUb"/>
                                 <exclude reference="yPA-Et-X1x"/>
-                                <exclude reference="HGi-7d-QwZ"/>
                                 <exclude reference="zw7-Yh-5z2"/>
                                 <exclude reference="csE-k6-xDP"/>
                                 <exclude reference="6TY-F1-9k9"/>
@@ -114,8 +187,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="button" destination="DKP-c7-ZQI" id="F0l-PF-kXc"/>
+                        <outlet property="buttonMinus" destination="HIm-Cd-sg6" id="NEA-dZ-Mev"/>
+                        <outlet property="buttonPlus" destination="DKP-c7-ZQI" id="HNQ-zq-TBL"/>
                         <outlet property="counter" destination="2Pw-bc-UKr" id="ADS-2Q-Ev8"/>
+                        <outlet property="history" destination="HMJ-zC-MM5" id="g6y-iV-rFe"/>
+                        <outlet property="null" destination="rNg-NP-YeQ" id="XAz-mD-lht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,8 +200,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
